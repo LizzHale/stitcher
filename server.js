@@ -15,14 +15,18 @@ app.get('/', function(req, res) {
     res.render('home');
 });
 
-app.get('/contest/vacation-photo',function(req,res){
+app.get('/upload', function(req, res) {
     var now = new Date();
-    res.render('contest/vacation-photo', {
+    res.render('upload/upload-gpx', {
         year: now.getFullYear(),month: now.getMonth()
     });
 });
 
-app.post('/contest/vacation-photo/:year/:month', function(req, res){
+app.get('/thank-you', function(req, res) {
+    res.render('thank-you');
+});
+
+app.post('/upload/:year/:month', function(req, res) {
     var form = new formidable.IncomingForm();
     form.parse(req, function(err, fields, files){
         if(err) return res.redirect(303, '/error');
