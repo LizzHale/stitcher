@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/LizzHale/stitcher/issues"
   },
-  "homepage": "https://github.com/LizzHale/stitcher#readme"
+  "homepage": "https://github.com/LizzHale/stitcher#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "formidable": "^1.0.17"
+  }
 }
